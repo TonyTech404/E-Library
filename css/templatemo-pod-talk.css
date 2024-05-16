@@ -12,14 +12,15 @@ https://templatemo.com/tm-584-pod-talk
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #00CC99;
-  --secondary-color:              #0066CC;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #0066CC;
-  --custom-btn-bg-hover-color:    #00CC99;
+  --white-color:                  #eeede9;
+  --primary-color:                #c7c3ba;
+  --secondary-color:              #f0f8ff;
+  --tertiary-color:               #000000;
+  --section-bg-color:             #3D352F;
+  --custom-btn-bg-color:          #3D352F;
+  --custom-btn-bg-hover-color:    #726960;
   --dark-color:                   #000000;
-  --p-color:                      #717275;
+  --p-color:                      #000000;
   --border-color:                 #7fffd4;
   --link-hover-color:             #0066CC;
 
@@ -58,10 +59,32 @@ body {
 
 h2,
 h3,
-h4,
 h5,
 h6 {
-  color: var(--dark-color);
+  color: var(--white-color);
+}
+h4 {
+  color: var(--tertiary-color);
+}
+
+h2.deets {
+  color: var(--secondary-color);
+}
+
+h2.title {
+  color: var(--tertiary-color);
+}
+
+h3.deets {
+  color: var(--tertiary-color);
+}
+
+h4.deets {
+  color: var(--secondary-color);
+}
+
+h6.footer {
+  color: var(--tertiary-color);
 }
 
 h1,
@@ -83,6 +106,8 @@ h2 {
   font-size: var(--h2-font-size);
   font-weight: var(--font-weight-bold);
 }
+
+
 
 h3 {
   font-size: var(--h3-font-size);
@@ -120,7 +145,7 @@ button {
 
 a {
   display: inline-block;
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   text-decoration: none;
 }
 
@@ -150,7 +175,7 @@ strong {
   content: "";
   background: var(--section-bg-color);
   width: 100%;
-  height: 2px;
+  height: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -202,7 +227,7 @@ main {
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
-  color: var(--primary-color);
+  color: var(--section-bg-color);
 }
 
 
@@ -249,7 +274,7 @@ main {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: url('../images/templatemo-wave-header.jpg'), linear-gradient(#348CD2, #FFFFFF);;
+  background-image: url('../images/felt-header.jpg'), linear-gradient(#c7c3ba, #c7c3ba);;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -279,6 +304,10 @@ main {
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
   color: var(--white-color);
+}
+
+.image-author {
+  height: 50px;
 }
 
 .navbar .logo-image {
@@ -475,7 +504,7 @@ main {
   CAROUSEL        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/templatemo-wave-banner.jpg'), linear-gradient(#348CD2, #FFFFFF);
+  background-image: url('../images/felt-banner.jpg'), linear-gradient(#c7c3ba, #c7c3ba);
   background-repeat: no-repeat;
   background-size: 108% 76%;
   background-position: top;
@@ -520,7 +549,7 @@ main {
 }
 
 .owl-carousel-info {
-  background-color: var(--section-bg-color);
+  background-color: var(--secondary-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
   position: absolute;
   bottom: 0;
@@ -574,7 +603,7 @@ main {
 }
 
 .owl-carousel .owl-dots {
-  background-color: var(--white-color);
+  background-color: var(--section-bg-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
   border-radius: var(--border-radius-large);
   display: inline-block;
@@ -716,7 +745,7 @@ main {
 }
 
 .custom-block-full {
-  background-color: var(--section-bg-color);
+  background-color: var(--primary-color);
   border-color: transparent;
 }
 
@@ -747,12 +776,13 @@ main {
 }
 
 .custom-block-top .badge {
-  background-color: var(--secondary-color);
+  background-color: var(--section-bg-color);
   color: var(--white-color);
   display: inline-block;
   vertical-align: middle;
   height: 26.64px;
   line-height: 20px;
+  margin-right: 10px;
 }
 
 .custom-block-bottom a:hover span {
@@ -855,7 +885,7 @@ main {
 .page-link {
   border: 0;
   border-radius: var(--border-radius-small);
-  color: var(--p-color);
+  color: var(--tertiary-color);
   font-family: var(--title-font-family);
   margin: 0 5px;
   padding: 10px 20px;
@@ -864,7 +894,7 @@ main {
 .page-link:hover,
 .page-item:first-child .page-link:hover,
 .page-item:last-child .page-link:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--section-bg-color);
   color: var(--white-color);
 }
 
@@ -873,8 +903,8 @@ main {
 }
 
 .active>.page-link, .page-link.active {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
 }
 
 
@@ -987,8 +1017,8 @@ main {
 }
 
 .search-form button[type="submit"] {
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
+  background: var(--tertiary-color);
+  border-color: var(--tertiary-color);
   max-width: 50px;
   height: 100%;
   padding-left: 15px;
@@ -1003,7 +1033,7 @@ main {
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  background-image: url('../images/templatemo-wave-footer.jpg'), linear-gradient(#FFFFFF, #348CD2);
+  background-image: url('../images/felt-footer.jpg'), linear-gradient(#c7c3ba, #c7c3ba);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1079,6 +1109,20 @@ main {
 
 .social-icon-link {
   background: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icon-link-2 { 
+  background: var(--dark-color);
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--p-font-size);
@@ -1245,3 +1289,13 @@ main {
 
 }
 
+.pdf {
+  width: 75%;
+  aspect-ratio: 4 / 3;
+  height: 690px;
+}
+
+.pdfobject-container { 
+  height: 750px; 
+  border: 1px solid #ccc; 
+}
